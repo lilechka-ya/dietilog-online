@@ -152,6 +152,125 @@ body {
   color: #2b5fc0;
 }
 
+/*Для каталога на 2 странице*/
+.catalog {
+  padding: 2rem;
+  background: #f6faff;
+}
+
+.catalog h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2b5fc0;
+  text-align: center;
+}
+
+.search-sort {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-sort input {
+  padding: 0.7rem 1rem;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #ccdff9;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.search-sort input:focus {
+  border-color: #2b5fc0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.program-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(43, 95, 192, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(43, 95, 192, 0.15);
+}
+
+.program-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.2rem;
+}
+
+.card-content h3,
+.card-content p {
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-content h3 {
+  color: #2b5fc0;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background-color: #ffffff;
+  color: #2b5fc0;
+  border: 2px solid #c6dafc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s;
+}
+
+.page-btn:hover {
+  background-color: #2b5fc0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.page-btn.active,
+.page-btn:disabled {
+  background-color: #2b5fc0;
+  color: white;
+  cursor: default;
+  border-color: #2b5fc0;
+}
+
 /*Футер*/
 .footer {
   background: #afcefd;
