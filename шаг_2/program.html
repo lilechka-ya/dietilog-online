@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>План похудения | Диетолог Онлайн</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo-circle">🍃</div>
+      <h1>Диетолог <span>Онлайн</span></h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Программы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="program-detail">
+    <button onclick="window.location.href='catalog.html'" class="back-button">← Назад к каталогу</button>
+
+    <div class="gallery">
+      <img src="./images/похудение.webp" alt="План похудения" class="main-image" />
+      <div class="thumbnails">
+        <img src="./images/худая девушка.jpg" alt="План 1" />
+        <img src="./images/девушка и спорт.jpg" alt="План 2" />
+        <img src="./images/полезный завтрак.jpg" alt="План 3" />
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Описание программы:</h3>
+      <p>Программа похудения разработана с учётом физиологических особенностей организма. Включает сбалансированное питание, дефицит калорий и поддержание энергии.</p>
+      <h3>Характеристики:</h3>
+      <ul>
+        <li>Продолжительность: 4 недели</li>
+        <li>Подходит для начинающих</li>
+        <li>Результат: -3 до -6 кг</li>
+        <li>Поддержка диетолога</li>
+      </ul>
+    </div>
+
+    <div class="reviews-section">
+      <h3>Отзывы</h3>
+      <!-- Форма для добавления отзыва -->
+      <form class="review-form">
+        <input type="text" name="username" placeholder="Ваше имя" required />
+        <textarea name="comment" rows="4" placeholder="Ваш отзыв..." required></textarea>
+        <button type="submit">Оставить отзыв</button>
+      </form>
+
+      <!-- Здесь позже будут отображаться отзывы через JS -->
+      <div class="review-list">
+        <!-- Пусто для будущего JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Диетолог Онлайн | Забота о вашем теле</p>
+  </footer>
+</body>
+</html>
