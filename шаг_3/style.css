@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Общие*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef6fb;
+  color: #1f2d5a;
+  line-height: 1.6;
+}
+
+/*Хедер*/
+.header {
+  background: linear-gradient(90deg, #2b5fc0, #4a7dfc);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  background: white;
+  color: #2b5fc0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.brand h1 {
+  font-size: 1.4rem;
+}
+
+.brand span {
+  color: #a3d0ff;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/*Слайдер*/
+.slider {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #d7e7ff;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-caption {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.slide-caption h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-caption p {
+  font-size: 1.1rem;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/*Информация*/
+.features {
+  padding: 2rem 7rem;
+  background: white;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #dde5f9;
+  border-radius: 16px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.feature img {
+  width: 280px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.feature-left {
+  flex-direction: row;
+}
+
+.feature-right {
+  flex-direction: row-reverse;
+}
+
+.feature .text {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+  color: #2b5fc0;
+}
+
+/* Анимация при прокрутке */
+
+.feature.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Для каталога на 2 странице*/
+.catalog {
+  padding: 2rem;
+  background: #f6faff;
+}
+
+.catalog h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2b5fc0;
+  text-align: center;
+}
+
+.search-sort {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-sort input {
+  padding: 0.7rem 1rem;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #ccdff9;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.search-sort input:focus {
+  border-color: #2b5fc0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.program-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(43, 95, 192, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(43, 95, 192, 0.15);
+}
+
+.program-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.2rem;
+}
+
+.card-content h3,
+.card-content p {
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-content h3 {
+  color: #2b5fc0;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background-color: #ffffff;
+  color: #2b5fc0;
+  border: 2px solid #c6dafc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s;
+}
+
+.page-btn:hover {
+  background-color: #2b5fc0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.page-btn.active,
+.page-btn:disabled {
+  background-color: #2b5fc0;
+  color: white;
+  cursor: default;
+  border-color: #2b5fc0;
+}
+
+/*Футер*/
+.footer {
+  background: #afcefd;
+  padding: 1rem;
+  text-align: center;
+  color: #475569;
+  height: 100px;
+}

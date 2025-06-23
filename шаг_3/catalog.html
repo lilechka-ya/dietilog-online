@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог программ | Диетолог Онлайн</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo-circle">🍃</div>
+      <h1>Диетолог <span>Онлайн</span></h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Программы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="catalog">
+    <h2>Программы питания</h2>
+
+    <div class="search-sort">
+      <input type="text" id="searchInput" placeholder="Поиск программ..." />
+    </div>
+
+    <div class="card-grid">
+      <a href="program.html" class="program-card" data-category="weight-loss">
+        <img src="./images/похудение.webp" alt="Похудение" />
+        <div class="card-content">
+          <h3>План похудения</h3>
+          <p>Снижение веса без вреда для здоровья.</p>
+        </div>
+      </a>
+
+      <div class="program-card" data-category="muscle-gain">
+        <img src="./images/набор массы.webp" alt="Мышцы" />
+        <div class="card-content">
+          <h3>Набор мышечной массы</h3>
+          <p>Программа для активных и тренирующихся.</p>
+        </div>
+      </div>
+
+      <div class="program-card" data-category="detox">
+        <img src="./images/детокс.webp" alt="Детокс" />
+        <div class="card-content">
+          <h3>Детокс-программа</h3>
+          <p>Очищение организма и восстановление энергии.</p>
+        </div>
+      </div>
+
+      <div class="program-card" data-category="balanced">
+        <img src="./images/сбаланс питание.jpg" alt="Сбалансированное" />
+        <div class="card-content">
+          <h3>Сбалансированное питание</h3>
+          <p>Здоровый рацион на каждый день.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn active" disabled>1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">...</button>
+      <button class="page-btn">Следующая</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Диетолог Онлайн | Забота о вашем теле</p>
+  </footer>
+</body>
+</html>
