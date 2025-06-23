@@ -24,53 +24,133 @@
 
     <div class="search-sort">
       <input type="text" id="searchInput" placeholder="Поиск программ..." />
+      <select id="sortSelect">
+        <option value="alphabet">По алфавиту</option>
+        <option value="price-asc">По цене (↑)</option>
+        <option value="price-desc">По цене (↓)</option>
+      </select>
     </div>
 
     <div class="card-grid">
-      <a href="program.html" class="program-card" data-category="weight-loss">
+      <a href="program.html" class="program-card" data-category="weight-loss" data-price="1500">
         <img src="./images/похудение.webp" alt="Похудение" />
         <div class="card-content">
           <h3>План похудения</h3>
           <p>Снижение веса без вреда для здоровья.</p>
+          <p class="price">1500 ₽</p>
         </div>
       </a>
 
-      <div class="program-card" data-category="muscle-gain">
+      <a href="program.html" class="program-card" data-category="muscle-gain" data-price="2000">
         <img src="./images/набор массы.webp" alt="Мышцы" />
         <div class="card-content">
           <h3>Набор мышечной массы</h3>
           <p>Программа для активных и тренирующихся.</p>
+          <p class="price">2000 ₽</p>
         </div>
-      </div>
+      </a>
 
-      <div class="program-card" data-category="detox">
+      <a href="program.html" class="program-card" data-category="detox" data-price="1200">
         <img src="./images/детокс.webp" alt="Детокс" />
         <div class="card-content">
           <h3>Детокс-программа</h3>
           <p>Очищение организма и восстановление энергии.</p>
+          <p class="price">1200 ₽</p>
         </div>
-      </div>
+      </a>
 
-      <div class="program-card" data-category="balanced">
+      <a href="program.html" class="program-card" data-category="balanced" data-price="1300">
         <img src="./images/сбаланс питание.jpg" alt="Сбалансированное" />
         <div class="card-content">
           <h3>Сбалансированное питание</h3>
           <p>Здоровый рацион на каждый день.</p>
+          <p class="price">1300 ₽</p>
         </div>
-      </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="vegan" data-price="1800">
+        <img src="./images/веган.webp" alt="Веганский план" />
+        <div class="card-content">
+          <h3>Веганский план</h3>
+          <p>Растительный рацион для здоровья.</p>
+          <p class="price">1800 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="keto" data-price="2200">
+        <img src="./images/кето.webp" alt="Кето-диета" />
+        <div class="card-content">
+          <h3>Кето-диета</h3>
+          <p>Низкоуглеводный план для быстрого результата.</p>
+          <p class="price">2200 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="sport" data-price="1900">
+        <img src="./images/спорт.webp" alt="Спорт-питание" />
+        <div class="card-content">
+          <h3>Спорт-питание</h3>
+          <p>Рацион для интенсивных тренировок.</p>
+          <p class="price">1900 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="antistress" data-price="1400">
+        <img src="./images/антистресс.webp" alt="Антистресс-питание" />
+        <div class="card-content">
+          <h3>Антистресс-питание</h3>
+          <p>Диета для снижения стресса и улучшения настроения.</p>
+          <p class="price">1400 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="kids" data-price="1100">
+        <img src="./images/детское.webp" alt="Детское питание" />
+        <div class="card-content">
+          <h3>Детское питание</h3>
+          <p>Здоровый рацион для детей.</p>
+          <p class="price">1100 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="energy" data-price="1600">
+        <img src="./images/энергия.webp" alt="Питание для энергии" />
+        <div class="card-content">
+          <h3>Питание для энергии</h3>
+          <p>Рацион для повышения энергии и продуктивности.</p>
+          <p class="price">1600 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="paleo" data-price="2100">
+        <img src="./images/палео.webp" alt="Палео-диета" />
+        <div class="card-content">
+          <h3>Палео-диета</h3>
+          <p>Естественное питание по принципам палео.</p>
+          <p class="price">2100 ₽</p>
+        </div>
+      </a>
+
+      <a href="program.html" class="program-card" data-category="fasting" data-price="1000">
+        <img src="./images/пост.webp" alt="Постное питание" />
+        <div class="card-content">
+          <h3>Постное питание</h3>
+          <p>Рацион для соблюдения поста.</p>
+          <p class="price">1000 ₽</p>
+        </div>
+      </a>
     </div>
 
     <div class="pagination">
       <button class="page-btn active" disabled>1</button>
       <button class="page-btn">2</button>
       <button class="page-btn">3</button>
-      <button class="page-btn">...</button>
-      <button class="page-btn">Следующая</button>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Диетолог Онлайн | Забота о вашем теле</p>
+    <p>&copy; 2025 Диетолог Онлайн | Сделано с заботой 🫶</p
   </footer>
+  <script src="script_catalog.js"></script>
 </body>
 </html>

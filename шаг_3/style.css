@@ -216,13 +216,30 @@ body {
   border-color: #2b5fc0;
 }
 
+select#sortSelect {
+  padding: 0.7rem 1rem;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccdff9;
+  outline: none;
+  transition: border 0.3s;
+  background: white;
+  color: #475569;
+  font-size: 1rem;
+}
+
+select#sortSelect:focus {
+  border-color: #2b5fc0;
+}
+
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 240px)); /* Фиксированная ширина столбцов */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  justify-content: center; /* Центрируем карточки */
 }
 
 .program-card {
@@ -234,8 +251,15 @@ body {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(43, 95, 192, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  width: 240px; /* Фиксированная ширина карточки */
+}
+
+.program-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .program-card:hover {
@@ -267,6 +291,13 @@ body {
 
 .card-content p {
   color: #475569;
+  font-size: 1rem;
+}
+
+.card-content .price {
+  margin-top: 0.5rem;
+  color: #2b5fc0;
+  font-weight: bold;
   font-size: 1rem;
 }
 
